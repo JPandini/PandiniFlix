@@ -30,10 +30,29 @@ function Filme(){
         }
         loadFilmes();
 
-        return() =>{
+        return() =>{ 
             console.log("o componente foi desmontado")
         }
     }, [navigation, id])
+
+
+    function salvarFilme(){
+        const minhaLista = localStorage.getItem("@pandiniFlix");
+        
+        let filmeSalvo = JSON.parse(minhaLista) || [];
+
+        const hasFilme = filmeSalvo.some((filmesalvado) => filmesalvado.id === filme.id )
+
+        if(hasFilme){
+            alert("ESSE FILME JA FOI ADICIONADO")
+            return;
+        }
+
+        filmeSalvo.push(filme);
+        localStorage.setItem("@pandiniFlix", JSON.stringify(filmeSalvo))
+        alert("Filme salvo com sucesso!!")
+    }
+
 
     if(loading){
         return(
@@ -53,8 +72,8 @@ function Filme(){
         <strong>Avaliação: {filme.vote_average.toFixed(1)} / 10</strong>
         
         <div className="area-button">
-            <button>Salvar</button>
-                <a target="_blank" rel="external" href={ `https://youtube.com/results?search_query=${filme.title} Trailer` }>
+            <button onClick={salvarFilme}>Salvar</button>
+                <a target="blank" rel="external" href={ `https://youtube.com/results?search_query=${filme.title} Trailer` }>
                     <button>Trailer</button>
                     </a>
         </div>
