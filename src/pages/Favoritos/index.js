@@ -7,3 +7,5 @@ function Favoritos(){
         </div>
     )
 }
+
+export default Favoritos;
