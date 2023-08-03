@@ -11,9 +11,22 @@ function Favoritos(){
 
     }, [])
 
+    function excluirFilme(id){
+        let filtroFilmes= filmes.filter((item) => {
+            return(item.id !== id)
+        })        
+        setFilmes(filtroFilmes);
+
+        localStorage.setItem("@pandiniFlix", JSON.stringify(filtroFilmes) )
+    }
+
+
     return(
         <div className='meus-filmes'>
             <h1>MEUS FILMES</h1>
+
+        {filmes.length === 0 && <span> Você não possui nenhum filme salvo </span>}
+
 
         <ul>
             {filmes.map((item)=>{
@@ -21,8 +34,8 @@ function Favoritos(){
                     <li key={item.id}>
                         <span>{item.title}</span>
                         <div>
-                            <Link to={`/filme/${item.id}`}>Ver detalher</Link>
-                            <button>Excluir</button>
+                            <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
+                            <button onClick={() => excluirFilme (item.id) }>Excluir</button>
                         </div>
                     </li>
                 )
