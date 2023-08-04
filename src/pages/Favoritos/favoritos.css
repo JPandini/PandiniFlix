@@ -6,8 +6,7 @@
 }
 
 .meus-filmes h1{
-    margin-bottom: 14px;
-
+    margin-bottom: 32px;
 }
 
 .meus-filmes span{
@@ -37,4 +36,21 @@
     text-decoration: none;
     color: #116feb;
     margin-right: 14px;
+}
+
+.meus-filmes button{
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.meus-filmes button:hover{
+    background-color: rgb(49, 48, 48);
+    color: white;
 }
