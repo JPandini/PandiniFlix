@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import './filme-info.css';
+import { toast } from 'react-toastify'
 
 function Filme(){
     const { id } = useParams();
@@ -44,13 +45,13 @@ function Filme(){
         const hasFilme = filmeSalvo.some((filmesalvado) => filmesalvado.id === filme.id )
 
         if(hasFilme){
-            alert("ESSE FILME JA FOI ADICIONADO")
+            toast.warn("Esse filme já foi adicionado!!")
             return;
         }
 
         filmeSalvo.push(filme);
         localStorage.setItem("@pandiniFlix", JSON.stringify(filmeSalvo))
-        alert("Filme salvo com sucesso!!")
+        toast.success("Filme salvo com sucesso!!")
     }
 
 
