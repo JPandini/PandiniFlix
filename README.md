@@ -6,11 +6,11 @@ Você pode acessar o projeto aqui: [PandiniFlix](https://pandini-flix.vercel.app
 
 ## Screenshots
 
-![Screenshot 1](https://github.com/JPandini/PandiniFlix/assets/screenshots/screenshot1.png)
+![Screenshot 1](https://github.com/JPandini/PandiniFlix/assets/99928050/edbe8994-12e3-4019-970b-1aa4e3b19122)
 
-![Screenshot 2](https://github.com/JPandini/PandiniFlix/assets/screenshots/screenshot2.png)
+![Screenshot 2](https://github.com/JPandini/PandiniFlix/assets/99928050/650006ff-7d76-481e-ad30-d9bc7dfad608)
 
-![Screenshot 3](https://github.com/JPandini/PandiniFlix/assets/screenshots/screenshot3.png)
+![Screenshot 3](https://github.com/JPandini/PandiniFlix/assets/99928050/e8889399-e9f1-44be-8943-23218145b2e1)
 
 ## Descrição
 
